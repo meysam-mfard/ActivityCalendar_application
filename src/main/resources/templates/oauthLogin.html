@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth Login</title>
+
+    <!--th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--<script src="/webjars/jquery/3.3.1-2/jquery.min.js"></script>-->
+
+    <!--th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="936333300504-c84nu7vf4p3eirgbmlspt3qs20ambqpl.apps.googleusercontent.com">
+
+
+</head>
+<body>
+
+    <div class="card text-white bg-light offset-md-4" style="max-width: 25rem; margin-top: 50px">
+        <div class="card-header bg-info"><h2>Login with</h2></div>
+        <div class="card-body text-info">
+            <p class="card-text">
+                <div  class="col-md-4 offset-md-4">
+                    <a th:href="${url}" class="btn btn-primary btn-lg active" role="button">Google</a>
+                </div>
+            <!--<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>-->
+
+            </p>
+        </div>
+    </div>
+</body>
+</html>

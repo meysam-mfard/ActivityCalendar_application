@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Activity</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+          th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+
+    <script src="/webjars/jquery/3.3.1-2/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+            th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+    <form  th:object="${activity}" th:action="@{/activity/}">
+            <div class="card text-white bg-light offset-md-4" style="max-width: 25rem; margin-top: 50px">
+                <div class="card-header bg-info"><h2>New Activity</h2></div>
+                <div class="card-body text-info">
+                    <!--<h5 class="card-title">Success card title</h5>-->
+                    <p class="card-text">
+                        <div class="form-group">
+                            <label><h3>Activity Name</h3></label>
+                            <input type="text" class="form-control" th:field="*{name}"/>
+                        </div>
+                        <div class="form-group">
+                            <label><h3>Activity Budget</h3></label>
+                            <input type="text" class="form-control" th:field="*{budget}" placeholder="in complete hours"/>
+                        </div>
+                        <button type="submit" class="btn btn-info">Add Activity</button>
+                    </p>
+                </div>
+            </div>
+    </form>
+</body>
+</html>
